@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-K6SW42BB9K');
-  </script>
 
 <title>Projective Geometry and Transformations of 2D</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6SW42BB9K"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K6SW42BB9K');
+</script>
 
 
 
@@ -13587,7 +13589,7 @@ lets prove the above statement from our knowledge, <ul>
 <li>$\cos \theta = \frac{1}{\sqrt{\tan^2\theta + 1}}$
 now lets start deriving the equation
 $$\begin{align*}
-\cos \theta = \frac{1}{\sqrt{\tan^2\theta + 1}}\\
+\cos \theta &amp;= \frac{1}{\sqrt{\tan^2\theta + 1}}\\
 &amp;=\frac{1}{\sqrt{\left(\frac{p_2-p_1}{1 + p_1p_2}\right) + 1}}\\
 &amp;=\frac{1 + p_1p_2}{\sqrt{{p_1}^2 + {p_2}^2 + 1 + (p_1p_2)^2}}\\
 &amp;=\frac{1+\left(\frac{l_1}{l_2}\frac{m_1}{m_2}\right)}{\sqrt{\frac{{l_1}^2}{{l_2}^2} + \frac{{m_1}^2}{{m_2}^2} + 1 + \frac{{l_1}^2}{{l_2}^2}\frac{{m_1}^2}{{m_2}^2}}}, Substituting Respective Slopes\\
@@ -13609,56 +13611,7 @@ $$ S = AA^T = VDV^TVDV^T = VD^2V = V\begin{pmatrix}{\lambda_1}^2 &amp; 0\\0 &amp
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">degrees</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="n">tx</span><span class="o">=</span><span class="mi">25</span><span class="p">;</span> <span class="n">ty</span> <span class="o">=</span> <span class="mi">26</span>
-<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">degrees</span><span class="p">)),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">degrees</span><span class="p">)),</span> <span class="n">tx</span><span class="p">],</span>
-                     <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">degrees</span><span class="p">)),</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">degrees</span><span class="p">)),</span> <span class="n">ty</span><span class="p">],</span>
-                     <span class="p">[</span>                          <span class="mi">0</span><span class="p">,</span>                            <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">]])</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[49]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.8660254, -0.5      , 25.       ],
-       [ 0.8660254, -0.5      , 26.       ],
-       [ 0.       ,  0.       ,  1.       ]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style&gt;.prompt{width: 0px; min-width: 0px; visibility: collapse}&lt;/style&gt;&#39;</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13676,31 +13629,6 @@ $$ S = AA^T = VDV^TVDV^T = VD^2V = V\begin{pmatrix}{\lambda_1}^2 &amp; 0\\0 &amp
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
-<span class="s1">code_show=true; </span>
-<span class="s1">function code_toggle() {</span>
-<span class="s1"> if (code_show){</span>
-<span class="s1"> $(&#39;div.input&#39;).hide();</span>
-<span class="s1"> } else {</span>
-<span class="s1"> $(&#39;div.input&#39;).show();</span>
-<span class="s1"> }</span>
-<span class="s1"> code_show = !code_show</span>
-<span class="s1">} </span>
-<span class="s1">$( document ).ready(code_toggle);</span>
-<span class="s1">&lt;/script&gt;</span>
-<span class="s1">&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
