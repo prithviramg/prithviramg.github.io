@@ -16,7 +16,6 @@
 </script>
 
 
-
 <style type="text/css">
     /*!
 *
@@ -13605,8 +13604,23 @@ $$({l_1}' {l_2}' {l_3}') \begin{pmatrix} AA^T&amp;\overrightarrow 0\\ \overright
 which gives us the following equation for the elements of s:$$s_{11}{l_1}'{m_1}' + s_{12}({l_1}'{m_2}' + {l_2}'{m_1}') + s_{22}{l_2}'{m_2}' = 0$$</li>
 <li>if we have another angle-to-angle correspondence - between 2 lines forming 90 degrees angle in the original scene and the images of these lines forming some angle $\beta$ in the recorded image - we can write another equation of the shortform shown above for elements of "s". Note: Although we have 3 unknowns $s_{11},s_{12},s_{22}$, we need only 2 equations because we are intersted in only ratios, so we can make one of the element as 1. Having calculated "s" matrix we still need to calculate "A" $2 \times 2$ matrix</li>
 <li>recall that A is non-singular matrix and if we also assume A is positive definite matrix, which tends to eigen decompostion of A matrix $$ A = VDV^T \implies D = \begin{pmatrix}\lambda_1 &amp; 0\\0 &amp; \lambda_2\end{pmatrix}, \lambda_1,\lambda_2 &gt; 0$$
-$$ S = AA^T = VDV^TVDV^T = VD^2V = V\begin{pmatrix}{\lambda_1}^2 &amp; 0\\0 &amp; {\lambda_2}^2\end{pmatrix}V^T$$</li>
+$$ S = AA^T = VDV^TVDV^T = VD^2V = V\begin{pmatrix}{\lambda_1}^2 &amp; 0\\0 &amp; {\lambda_2}^2\end{pmatrix}V^T$$
+where we used the fact that $V^TV = I$ because of the orthonormality of the eigenvectors. So, by doing an eigen decomposition of $S$, we get eigenvectors of A, with its eigenvectors given by the positive square roots of the eigenvalues of $S$</li>
+<li>Note that $S$ is guaranteed to possess an eigen decomposition because it is positive-definite: $x^TSx = x^TA^TAx = (Ax)^T(AX) = ||Ax||^2 &gt; 0$ for all nonzero $x$. For this assertion to hold, $A$ must be non-singular since it must be of full rank. If not of full rank, A will possess a null vector $x$ for which $Ax = 0$, which will negate the assertion.</li>
+<li>As already mentioned, for the matrix $A$ to be positive definite, its eigenvalues must be positive. An interesting aside: for $2 \times 2$ matrices, the positive-definiteness condition can be checked algebraically as follows: The eigenvalues of $A$ are the roots of the characterstics polynomial $det(A - \lambda I) = 0$. With $A = \begin{pmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{pmatrix}$ this becomes $det\begin{pmatrix}a_{11}-\lambda&amp;a_{12}\\a_{21}&amp;a_{22}-\lambda\end{pmatrix} = 0$. Writing out the expressions for the roots ${\lambda}_1$ and ${\lambda}_2$ of the quadratic form and requiring that roots be positive gives us the conditions $a_{11} &gt; 0$ and $a_{11}a_{22}&gt;a_{12}a_{21}$ for $A$ to be positive definite.</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Salutations">Salutations<a class="anchor-link" href="#Salutations">&#182;</a></h4><ol>
+<li>Photogrammetric Computer Vision: Statistics, Geometry, Orientation and Reconstruction, by  Wolfgang Förstner , Bernhard P. Wrobel</li>
+<li>Multiple View Geometry in Computer Vision (Second Edition), by Andrew Zisserman</li>
+<li><a href="https://www.youtube.com/channel/UCi1TC2fLRvgBQNe-T4dp8Eg">Cyrill Stachniss</a></li>
+</ol>
 
 </div>
 </div>
